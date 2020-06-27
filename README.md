@@ -153,15 +153,31 @@ echo $WELCOME
 
 - `echo $PATH` tiene la ubicación de todos los binarios que se pueden ejecutar
 
-## Seguridad
-
-
-
 ```bash
 #!/bin/bash
 CWD=${pwd}
 FECHA=${date + "%F%T"}
 ```
 
+## Seguridad
 
+### Superficie de Ataque
+
+Se refiere a todos los servicios que pueden estar expuestos a vulnerabilidades.  Cada servicio de una infraestructura puede ser un punto de entrada para el atacante.
+
+- Linix: Software que analiza el servidor y genera recomendaciones basadas en las bases de datos de CVE.
+- Openscap
+- OWASP: Conjunto de buenas prácticas para protegerse de ataques.
+
+No solamente se trata de proteger el servidor, se trata tambien de proteger cada servicio, app, etc.
+
+- ufw: Firewall para implementar en ubuntu
+
+### Configurando el Firewall
+
+- `sudo ufw status numbered`
+- `sudo ufw allow 22 comment "ssh"`
+- `sudo ufw enable`
+-  `sudo ufw delete <ruleID>`
+- `sudo ufw allow from <clientIP> proto tcp to any port <portNumber> comment "<comment>"`
 
