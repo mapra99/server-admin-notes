@@ -144,3 +144,24 @@ El comando `systemctl`
 
 ## Bash Scripting
 
+```bash
+#!/bin/bash
+# esto es un comentario
+WELCOME="Asi se declara una variable local"
+echo $WELCOME
+```
+
+- `echo $PATH` tiene la ubicación de todos los binarios que se pueden ejecutar
+
+## Seguridad
+
+
+
+```bash
+#!/bin/bash
+CWD=${pwd}
+FECHA=${date + "%F%T"}
+```
+
+
+
